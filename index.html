@@ -91,7 +91,7 @@
       margin-bottom: 8px;
     }
 
-    input, select {
+    input {
       width: 100%;
       padding: 14px;
       border: 1px solid #d8deea;
@@ -135,12 +135,28 @@
       font-size: 14px;
     }
 
-    .vaga a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #155eef;
+    .botoes-vaga {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .btn-ver-vaga {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 13px;
+      border-radius: 12px;
+      background: #155eef;
+      color: white;
       font-weight: bold;
       text-decoration: none;
+    }
+
+    .btn-divulgacao {
+      background: #25d366;
+      margin-top: 0;
     }
 
     #resultado {
@@ -186,6 +202,7 @@
   <main>
 
     <section class="card">
+
       <h2>Boas oportunidades começam aqui. 💼</h2>
 
       <p class="intro">
@@ -194,6 +211,7 @@
       </p>
 
       <div class="stats">
+
         <div class="stat">
           <strong id="totalVagas">5</strong>
           <span>Vagas no painel</span>
@@ -208,10 +226,14 @@
           <strong>0</strong>
           <span>Anúncios criados</span>
         </div>
+
       </div>
+
     </section>
 
+
     <section class="card">
+
       <h2>🔎 Buscar vagas</h2>
 
       <label for="busca">Cargo ou palavra-chave</label>
@@ -226,177 +248,154 @@
         Buscar vagas
       </button>
 
+
       <div id="listaVagas">
 
+
         <div class="vaga">
+
           <h3>Auxiliar de Produção</h3>
           <p>📍 São Paulo – SP</p>
           <p>💼 CLT</p>
           <p>🕒 Publicado recentemente</p>
-          <a href="#" onclick="gerarDivulgacao('Auxiliar de Produção','São Paulo – SP','CLT')">
-            Criar divulgação
-          </a>
+
+          <div class="botoes-vaga">
+
+            <a
+              class="btn-ver-vaga"
+              href="https://www.google.com/search?q=Auxiliar+de+Produção+vagas+São+Paulo"
+              target="_blank"
+            >
+              🔎 Procurar vagas
+            </a>
+
+            <button
+              class="btn-divulgacao"
+              onclick="gerarDivulgacao(
+                'Auxiliar de Produção',
+                'São Paulo – SP',
+                'CLT',
+                'https://www.google.com/search?q=Auxiliar+de+Produção+vagas+São+Paulo'
+              )"
+            >
+              📢 Criar divulgação
+            </button>
+
+          </div>
+
         </div>
 
+
         <div class="vaga">
+
           <h3>Assistente Administrativo</h3>
           <p>📍 São Paulo – SP</p>
           <p>💼 CLT</p>
           <p>🕒 Publicado recentemente</p>
-          <a href="#" onclick="gerarDivulgacao('Assistente Administrativo','São Paulo – SP','CLT')">
-            Criar divulgação
-          </a>
+
+          <div class="botoes-vaga">
+
+            <a
+              class="btn-ver-vaga"
+              href="https://www.google.com/search?q=Assistente+Administrativo+vagas+São+Paulo"
+              target="_blank"
+            >
+              🔎 Procurar vagas
+            </a>
+
+            <button
+              class="btn-divulgacao"
+              onclick="gerarDivulgacao(
+                'Assistente Administrativo',
+                'São Paulo – SP',
+                'CLT',
+                'https://www.google.com/search?q=Assistente+Administrativo+vagas+São+Paulo'
+              )"
+            >
+              📢 Criar divulgação
+            </button>
+
+          </div>
+
         </div>
 
+
         <div class="vaga">
+
           <h3>Operador de Máquina</h3>
           <p>📍 São Bernardo do Campo – SP</p>
           <p>💼 CLT</p>
           <p>🕒 Publicado recentemente</p>
-          <a href="#" onclick="gerarDivulgacao('Operador de Máquina','São Bernardo do Campo – SP','CLT')">
-            Criar divulgação
-          </a>
+
+          <div class="botoes-vaga">
+
+            <a
+              class="btn-ver-vaga"
+              href="https://www.google.com/search?q=Operador+de+Máquina+vagas+São+Bernardo+do+Campo"
+              target="_blank"
+            >
+              🔎 Procurar vagas
+            </a>
+
+            <button
+              class="btn-divulgacao"
+              onclick="gerarDivulgacao(
+                'Operador de Máquina',
+                'São Bernardo do Campo – SP',
+                'CLT',
+                'https://www.google.com/search?q=Operador+de+Máquina+vagas+São+Bernardo+do+Campo'
+              )"
+            >
+              📢 Criar divulgação
+            </button>
+
+          </div>
+
         </div>
 
+
         <div class="vaga">
+
           <h3>Vendedor</h3>
           <p>📍 Brasil</p>
           <p>💼 CLT</p>
           <p>🕒 Nova oportunidade</p>
-          <a href="#" onclick="gerarDivulgacao('Vendedor','Brasil','CLT')">
-            Criar divulgação
-          </a>
+
+          <div class="botoes-vaga">
+
+            <a
+              class="btn-ver-vaga"
+              href="https://www.google.com/search?q=Vendedor+vagas+Brasil"
+              target="_blank"
+            >
+              🔎 Procurar vagas
+            </a>
+
+            <button
+              class="btn-divulgacao"
+              onclick="gerarDivulgacao(
+                'Vendedor',
+                'Brasil',
+                'CLT',
+                'https://www.google.com/search?q=Vendedor+vagas+Brasil'
+              )"
+            >
+              📢 Criar divulgação
+            </button>
+
+          </div>
+
         </div>
 
+
         <div class="vaga">
+
           <h3>Babá</h3>
           <p>📍 Porto Alegre – RS</p>
           <p>💼 CLT</p>
           <p>🕒 Publicado recentemente</p>
-          <a href="#" onclick="gerarDivulgacao('Babá','Porto Alegre – RS','CLT')">
-            Criar divulgação
-          </a>
-        </div>
 
-      </div>
-    </section>
+          <div class="botoes-vaga">
 
-    <section class="card">
-      <h2>📢 Gerador de divulgação</h2>
-
-      <p class="intro">
-        Escolha uma vaga acima para criar automaticamente seu texto.
-      </p>
-
-      <div id="resultado"></div>
-
-      <div class="acoes" id="acoes">
-        <button onclick="copiarTexto()">
-          📋 Copiar texto
-        </button>
-
-        <button class="btn-secundario" onclick="compartilharTexto()">
-          📲 Compartilhar
-        </button>
-      </div>
-
-    </section>
-
-  </main>
-
-  <footer>
-    GE VAGAS © 2026<br>
-    Encontre • Divulgue • Ganhe
-  </footer>
-
-  <script>
-
-    let textoAtual = "";
-
-    function buscarVagas() {
-
-      const busca = document
-        .getElementById("busca")
-        .value
-        .toLowerCase();
-
-      const vagas = document.querySelectorAll(".vaga");
-
-      vagas.forEach(function(vaga) {
-
-        const texto = vaga.innerText.toLowerCase();
-
-        if (texto.includes(busca)) {
-          vaga.style.display = "block";
-        } else {
-          vaga.style.display = "none";
-        }
-
-      });
-
-    }
-
-    function gerarDivulgacao(cargo, local, tipo) {
-
-      textoAtual =
-`🚨 NOVA VAGA DISPONÍVEL!
-
-💼 Cargo: ${cargo}
-📍 Local: ${local}
-📄 Contratação: ${tipo}
-
-📢 Gostou da oportunidade?
-
-Acesse o link da vaga e envie sua candidatura.
-
-🔎 GE VAGAS
-Encontre • Divulgue • Ganhe`;
-
-      document.getElementById("resultado").innerText = textoAtual;
-
-      document.getElementById("resultado").style.display = "block";
-
-      document.getElementById("acoes").style.display = "grid";
-
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
-      });
-
-    }
-
-    function copiarTexto() {
-
-      navigator.clipboard.writeText(textoAtual)
-        .then(function() {
-          alert("Texto copiado com sucesso! 📋");
-        })
-        .catch(function() {
-          alert("Não foi possível copiar automaticamente.");
-        });
-
-    }
-
-    function compartilharTexto() {
-
-      if (navigator.share) {
-
-        navigator.share({
-          title: "GE VAGAS",
-          text: textoAtual
-        });
-
-      } else {
-
-        copiarTexto();
-
-        alert("Seu navegador não possui compartilhamento direto. O texto foi copiado.");
-
-      }
-
-    }
-
-  </script>
-
-</body>
-</html>
+            <a
+              class="btn-ver-vaga
