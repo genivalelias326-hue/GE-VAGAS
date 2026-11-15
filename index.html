@@ -195,9 +195,11 @@
   placeholder="Ex: auxiliar, vendedor, produção..."
 >
 
-<button type="button" onclick="buscarVagas()">
-  🔎 Buscar vagas
+<button type="button" onclick="buscarGrupoRH()">
+  🏢 Buscar no Grupo RH
 </button>
+
+<div id="statusBusca" class="aviso"></div>
 
 <div id="listaVagas"></div>
 
@@ -484,7 +486,49 @@ async function compartilhar() {
   }
 
 }
+function buscarGrupoRH() {
 
+  const termo = document
+    .getElementById("busca")
+    .value
+    .trim()
+    .toLowerCase();
+
+  const status = document.getElementById("statusBusca");
+
+  status.style.display = "block";
+
+  status.textContent = "🔎 Procurando vagas do Grupo RH...";
+
+  const resultado = vagas.filter(vaga => {
+
+    const ehGrupoRH =
+      vaga.link.includes("gruporhconsultoria.com");
+
+    const corresponde =
+      !termo ||
+      vaga.cargo.toLowerCase().includes(termo) ||
+      vaga.local.toLowerCase().includes(termo);
+
+    return ehGrupoRH && corresponde;
+
+  });
+
+  if (resultado.length === 0) {
+
+    status.textContent =
+      "⚠️ Nenhuma vaga do Grupo RH encontrada.";
+
+  } else {
+
+    status.textContent =
+      `✅ ${resultado.length} vaga(s) encontrada(s) no Grupo RH.`;
+
+  }
+
+  mostrarVagas(resultado);
+
+}
 mostrarVagas(vagas);
 
 </script></body>
